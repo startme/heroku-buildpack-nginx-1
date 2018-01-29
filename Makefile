@@ -1,8 +1,4 @@
-build: build-cedar-14 build-heroku-16
-
-build-cedar-14:
-	@echo "Building Nginx in docker for cedar-14..."
-	@docker run -v $(shell pwd):/buildpack --rm -it -e "STACK=cedar-14" -w /buildpack heroku/cedar:14 scripts/build_nginx /buildpack/bin/nginx-cedar-14
+build: build-heroku-16
 
 build-heroku-16:
 	@echo "Building Nginx in docker for heroku-16..."
